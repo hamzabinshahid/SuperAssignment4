@@ -24,7 +24,7 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
+        return view('hotel-room');
     }
 
     /**
@@ -64,7 +64,7 @@ class RoomController extends Controller
      */
     public function edit(Room $room)
     {
-        //
+        return view('edit-room', compact('room'));
     }
 
     /**
@@ -76,7 +76,14 @@ class RoomController extends Controller
      */
     public function update(Request $request, Room $room)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'capacity'=> 'required|integer',
+            'states' => 'required',
+            'hasac' => 'required'
+        ]);
+        $room->update($request->all());
+        return redirect('/')->with('success', 'Room has been Updated');
     }
 
     /**
@@ -87,6 +94,7 @@ class RoomController extends Controller
      */
     public function destroy(Room $room)
     {
-        //
+        $room->delete();
+        return redirect('/')->with('success', 'Room has been Deleted');
     }
 }

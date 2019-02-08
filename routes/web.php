@@ -12,7 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('hotel-room');
+    return view('home');
 });
-Route::post('room','RoomController@store');
-
+Route::get('/add-room', 'RoomController@create');
+Route::post('/room','RoomController@store');
+Route::get('/edit-room/{room}', 'RoomController@edit');
+Route::put('/edit-room/{room}', 'RoomController@update');
+Route::delete('room/{room}', 'RoomController@destroy');
+Route::get('/add-person','PersonController@create');
+Route::post('/add-person', 'PersonController@store');
+Route::get('/edit-person/{person}', 'PersonController@edit');
+Route::put('/edit-person/{person}', 'PersonController@update');
+Route::delete('person/{person}', 'PersonController@destroy');
+Route::get('sum', 'PersonController@sum');

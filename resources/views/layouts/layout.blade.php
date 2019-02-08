@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>@yield('title') | Super Web Assignment 4</title>
     <!-- GLOBAL MAINLY STYLES-->
-    <link href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="assets/vendors/line-awesome/css/line-awesome.min.css" rel="stylesheet" />
-    <link href="assets/vendors/themify-icons/css/themify-icons.css" rel="stylesheet" />
-    <link href="assets/vendors/animate.css/animate.min.css" rel="stylesheet" />
-    <link href="assets/vendors/toastr/toastr.min.css" rel="stylesheet" />
-    <link href="assets/vendors/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="/assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/vendors/line-awesome/css/line-awesome.min.css" rel="stylesheet" />
+    <link href="/assets/vendors/themify-icons/css/themify-icons.css" rel="stylesheet" />
+    <link href="/assets/vendors/animate.css/animate.min.css" rel="stylesheet" />
+    <link href="/assets/vendors/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="/assets/vendors/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" />
     <!-- PLUGINS STYLES-->
     <!-- THEME STYLES-->
-    <link href="assets/css/main.min.css" rel="stylesheet" />
+    <link href="/assets/css/main.min.css" rel="stylesheet" />
     <!-- PAGE LEVEL STYLES-->
 </head>
 
@@ -24,7 +24,7 @@
     <!-- START HEADER-->
     <header class="header">
         <div class="page-brand">
-            <a href="index.html">
+            <a href="/">
                 <span class="brand">Super Assignment</span>
                 <span class="brand-mini">SA</span>
             </a>
@@ -47,13 +47,13 @@
                 <li class="dropdown dropdown-user">
                     <a class="nav-link dropdown-toggle link" data-toggle="dropdown">
                         <span>Super User</span>
-                        <img src="assets/img/users/admin-image.png" alt="image" />
+                        <img src="/assets/img/users/admin-image.png" alt="image" />
                     </a>
                     <div class="dropdown-menu dropdown-arrow dropdown-menu-right admin-dropdown-menu">
                         <div class="dropdown-arrow"></div>
                         <div class="dropdown-header">
                             <div class="admin-avatar">
-                                <img src="assets/img/users/admin-image.png" alt="image" />
+                                <img src="/assets/img/users/admin-image.png" alt="image" />
                             </div>
                             <div>
                                 <h5 class="font-strong text-white">Super User</h5>
@@ -101,11 +101,15 @@
         <div id="sidebar-collapse">
             <ul class="side-menu metismenu">
                 <li>
-                    <a href="javascript:;"><i class="sidebar-item-icon ti-home"></i>
+                    <a href="/"><i class="sidebar-item-icon ti-home"></i>
                         <span class="nav-label">Dashboards</span></a>
                 </li>
                 <li>
-                    <a href="javascript:;"><i class="sidebar-item-icon ti-user"></i>
+                    <a href="/add-room"><i class="sidebar-item-icon ti-wallet"></i>
+                        <span class="nav-label">Rooms</span></a>
+                </li>
+                <li>
+                    <a href="/add-person"><i class="sidebar-item-icon ti-user"></i>
                         <span class="nav-label">Persons</span></a>
                 </li>
 
@@ -152,18 +156,18 @@
 </div>
 <!-- END PAGA BACKDROPS-->
         <!-- CORE PLUGINS-->
-        <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
-        <script src="assets/vendors/popper.js/dist/umd/popper.min.js"></script>
-        <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="assets/vendors/metisMenu/dist/metisMenu.min.js"></script>
-        <script src="assets/vendors/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-        <script src="assets/vendors/jquery-idletimer/dist/idle-timer.min.js"></script>
-        <script src="assets/vendors/toastr/toastr.min.js"></script>
-        <script src="assets/vendors/jquery-validation/dist/jquery.validate.min.js"></script>
-        <script src="assets/vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+        <script src="/assets/vendors/jquery/dist/jquery.min.js"></script>
+        <script src="/assets/vendors/popper.js/dist/umd/popper.min.js"></script>
+        <script src="/assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/assets/vendors/metisMenu/dist/metisMenu.min.js"></script>
+        <script src="/assets/vendors/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="/assets/vendors/jquery-idletimer/dist/idle-timer.min.js"></script>
+        <script src="/assets/vendors/toastr/toastr.min.js"></script>
+        <script src="/assets/vendors/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="/assets/vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
         <!-- PAGE LEVEL PLUGINS-->
         <!-- CORE SCRIPTS-->
-        <script src="assets/js/app.min.js"></script>
+        <script src="/assets/js/app.min.js"></script>
         <!-- PAGE LEVEL SCRIPTS-->
 </body>
 </html>

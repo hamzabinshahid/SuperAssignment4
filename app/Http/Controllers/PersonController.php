@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Person;
+use App\Room;
 use Illuminate\Http\Request;
 
 class PersonController extends Controller
 {
+    public function sum()
+    {
+        $sum = DB::select('select ')
+        return $sum;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -24,7 +30,7 @@ class PersonController extends Controller
      */
     public function create()
     {
-        //
+        return view('people');
     }
 
     /**
@@ -33,9 +39,18 @@ class PersonController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Room $room)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'phone'=> 'required',
+            'dob'=> 'required',
+            'city'=> 'required',
+            'cnic' => 'required',
+            'institute' => 'required'
+        ]);
+            $person = Person::create($request->all());
+            return redirect('/')->with('success', 'People has been added');
     }
 
     /**
@@ -57,7 +72,7 @@ class PersonController extends Controller
      */
     public function edit(Person $person)
     {
-        //
+        return view('edit-person', compact('person'));
     }
 
     /**
@@ -69,7 +84,16 @@ class PersonController extends Controller
      */
     public function update(Request $request, Person $person)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'phone'=> 'required',
+            'dob'=> 'required',
+            'city'=> 'required',
+            'cnic' => 'required',
+            'institute' => 'required'
+        ]);
+        $person->update($request->all());
+            return redirect('/')->with('success', 'People has been Updated');
     }
 
     /**
@@ -80,6 +104,7 @@ class PersonController extends Controller
      */
     public function destroy(Person $person)
     {
-        //
+        $person->delete();
+        return redirect('/')->with('success', 'People has been Deleted');
     }
 }
