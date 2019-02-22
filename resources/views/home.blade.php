@@ -18,7 +18,7 @@
                 </div>
                 <div class="ibox-body">
                     <ul class="media-list media-list-divider scroller mr-2" data-height="470px">
-                        @foreach($persons = App\Person::all() as $person)
+                        @foreach($persons as $person)
                         <li class="media">
                             <div class="media-body d-flex">
                                 <div class="flex-1">
@@ -46,68 +46,6 @@
                         </li>
                         @endforeach
                     </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="ibox ibox-fullheight">
-                <div class="ibox-head">
-                    <div class="ibox-title">
-                        <span class="btn-icon-only btn-circle bg-primary-50 text-primary mr-3"><i class="ti-wallet"></i></span>Hotel Rooms</div>
-                </div>
-                <div class="ibox-body">
-
-                    <div class="ibox-fullwidth-block">
-                        <table class="table">
-                            <thead class="thead-default thead-lg">
-                            <tr>
-                                <th class="pl-4">Name</th>
-                                <th>Capacity</th>
-                                <th>States</th>
-                                <th class="pr-4">Has A/C</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach ($rooms=App\Room::all() as $room)
-                            <tr>
-                                <td class="pl-4">
-                                    <div class="flexbox-b">
-                                        <div>
-                                            <h6 class="mb-1">{{$room->name}}</h6>
-                                            <div>
-                                               </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <h4 class="font-strong text-light mb-0">{{$room->capacity}}</h4>
-                                </td>
-                                <td>
-                                    <h4 class="font-strong text-primary mb-0">{{$room->states}}</h4>
-                                </td>
-                                <td class="pr-4">
-                                    <h4 class="font-strong text-primary mb-0">{{$room->hasac}}</h4>
-                                </td>
-                                <td>
-                                    <div class="text-left">
-                                        <a href="edit-room/{{$room->id}}" class="mr-5"><i class="ti-pencil-alt mr-2"></i>Edit</a>
-                                        <a href="room/{{$room->id}}" onclick="event.preventDefault();
-                                                     document.getElementById('delete-room').submit();"><i class="ti-close mr-2"></i>Remove</a>
-                                        <form id="delete-room" action="room/{{$room->id}}" method="post">
-                                            @csrf
-                                            @method('DELETE')
-
-                                        </form>
-                                    </div>
-                                </td>
-                            </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
-                    </div>
                 </div>
             </div>
         </div>

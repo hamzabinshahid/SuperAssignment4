@@ -8,11 +8,6 @@ use Illuminate\Http\Request;
 
 class PersonController extends Controller
 {
-    public function sum()
-    {
-        $sum = DB::select('select ')
-        return $sum;
-    }
     /**
      * Display a listing of the resource.
      *
@@ -20,7 +15,8 @@ class PersonController extends Controller
      */
     public function index()
     {
-        //
+        $persons = Person::all();
+        return view('home', compact('persons'));
     }
 
     /**

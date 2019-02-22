@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'PersonController@index');
+Route::get('/room','RoomController@index');
 Route::get('/add-room', 'RoomController@create');
 Route::post('/room','RoomController@store');
 Route::get('/edit-room/{room}', 'RoomController@edit');

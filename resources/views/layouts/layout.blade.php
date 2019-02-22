@@ -105,8 +105,12 @@
                         <span class="nav-label">Dashboards</span></a>
                 </li>
                 <li>
-                    <a href="/add-room"><i class="sidebar-item-icon ti-wallet"></i>
+                    <a href="/room"><i class="sidebar-item-icon ti-wallet"></i>
                         <span class="nav-label">Rooms</span></a>
+                </li>
+                <li>
+                    <a href="/add-room"><i class="sidebar-item-icon ti-wallet"></i>
+                        <span class="nav-label">Add Room</span></a>
                 </li>
                 <li>
                     <a href="/add-person"><i class="sidebar-item-icon ti-user"></i>

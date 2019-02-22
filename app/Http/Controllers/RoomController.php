@@ -14,7 +14,8 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
+        $rooms = Room::all();
+        return view('room', compact('rooms'));
     }
 
     /**
@@ -42,7 +43,7 @@ class RoomController extends Controller
             'hasac' => 'required'
         ]);
         $room = Room::create($request->all());
-        return redirect('/')->with('success', 'Room has been added');
+        return redirect('/room')->with('success', 'Room has been added');
     }
 
     /**
@@ -83,7 +84,7 @@ class RoomController extends Controller
             'hasac' => 'required'
         ]);
         $room->update($request->all());
-        return redirect('/')->with('success', 'Room has been Updated');
+        return redirect('/room')->with('success', 'Room has been Updated');
     }
 
     /**
